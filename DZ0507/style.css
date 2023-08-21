@@ -104,8 +104,8 @@ input {
     border: 1px solid #d7d7d7;
     box-shadow: 0 0 4px rgba(110, 91, 170, 0);
 }
-label {
-    margin-bottom: 15px;
+input  {
+    margin-top: 15px;
 }
 
 .footer_social_btn {
