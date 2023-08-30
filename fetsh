@@ -1,0 +1,19 @@
+const datasUrl = "https://jsonplaceholder.typicode.com/photos/ ";
+const cont = document.querySelector(".container");
+const btn = document.querySelector("#foto");
+const newArray = [];
+
+function getFotos(res) {
+  fetch(res)
+    .then((data) => data.json())
+    .then((result) =>
+      result.splice(0, 10).forEach((el) => newArray.push(el.title, el.id))
+    );
+  return newArray;
+}
+getFotos(datasUrl);
+
+function getElement() {
+  cont.innerHTML = "";
+  newArray.forEach((el) => (cont.innerHTML += `<p>${el}</p>`));
+}
